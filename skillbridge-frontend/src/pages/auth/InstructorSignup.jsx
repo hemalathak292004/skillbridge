@@ -18,7 +18,7 @@ export default function InstructorSignup() {
     try {
       const data = await api('/api/auth/register', { method: 'POST', body: { name, email, password, role: 'instructor' } })
       login(data) // New instructor goes directly to instructor home
-      navigate('/instructor/home')
+      navigate('/dashboard')
     } catch (err) {
       setError(err.message)
     }

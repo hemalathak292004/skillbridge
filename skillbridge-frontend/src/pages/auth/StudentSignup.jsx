@@ -18,7 +18,7 @@ export default function StudentSignup() {
     try {
       const data = await api('/api/auth/register', { method: 'POST', body: { name, email, password, role: 'student' } })
       login(data)
-      navigate('/student/home')
+      navigate('/dashboard')
     } catch (err) {
       setError(err.message)
     }

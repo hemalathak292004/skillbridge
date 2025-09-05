@@ -18,7 +18,7 @@ export default function InstructorLogin() {
       const data = await api('/api/auth/login', { method: 'POST', body: { email, password } })
       if (data?.user?.role !== 'instructor') throw new Error('Not an instructor account')
       login(data)
-      navigate('/instructor/home')
+      navigate('/dashboard')
     } catch (err) {
       setError(err.message)
     }

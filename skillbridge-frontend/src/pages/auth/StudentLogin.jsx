@@ -18,7 +18,7 @@ export default function StudentLogin() {
       const data = await api('/api/auth/login', { method: 'POST', body: { email, password } })
       if (data?.user?.role !== 'student') throw new Error('Not a student account')
       login(data)
-      navigate('/student/home')
+      navigate('/dashboard')
     } catch (err) {
       setError(err.message)
     }

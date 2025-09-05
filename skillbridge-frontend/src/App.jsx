@@ -6,6 +6,7 @@ import InstructorLogin from './pages/auth/InstructorLogin.jsx'
 import InstructorSignup from './pages/auth/InstructorSignup.jsx'
 import StudentHome from './pages/StudentHome.jsx'
 import InstructorHome from './pages/InstructorHome.jsx'
+import Dashboard from './components/Dashboard.jsx'
 import { AuthProvider, useAuth } from './context/AuthContext.jsx'
 import './App.css'
 
@@ -31,6 +32,9 @@ export default function App() {
           } />
           <Route path="/instructor/home" element={
             <Protected role="instructor"><InstructorHome /></Protected>
+          } />
+          <Route path="/dashboard" element={
+            <Protected><Dashboard /></Protected>
           } />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
