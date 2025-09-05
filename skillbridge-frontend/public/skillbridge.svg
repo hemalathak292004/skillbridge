@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" fill="none">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#6C5CE7"/>
+      <stop offset="1" stop-color="#00D2D3"/>
+    </linearGradient>
+  </defs>
+  <rect rx="28" ry="28" x="8" y="8" width="112" height="112" fill="url(#g)"/>
+  <!-- Abstract bridge arc -->
+  <path d="M24 80c12-12 28-18 40-18s28 6 40 18" stroke="#ffffff" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <!-- Bridge pillars -->
+  <path d="M32 80v22M64 80v22M96 80v22" stroke="#ffffff" stroke-width="6" stroke-linecap="round"/>
+  <!-- Deck -->
+  <path d="M20 100h88" stroke="#ffffff" stroke-width="6" stroke-linecap="round"/>
+</svg> 

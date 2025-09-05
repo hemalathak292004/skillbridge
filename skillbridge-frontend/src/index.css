@@ -1,0 +1,110 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* SkillBridge Brand */
+  --sb-bg: #0f1220;
+  --sb-surface: #171a2b;
+  --sb-border: #262a40;
+  --sb-text: #e6e8ff;
+  --sb-muted: #a6abcf;
+  --sb-primary: #6c5ce7; /* student */
+  --sb-primary-600: #5947e0;
+  --sb-accent: #00d2d3; /* instructor */
+  --sb-accent-600: #00b3b3;
+  --sb-ghost: #2a2f4a;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background: radial-gradient(1200px 800px at 10% -10%, rgba(108,92,231,0.15), transparent),
+              radial-gradient(1200px 800px at 110% 10%, rgba(0,210,211,0.12), transparent),
+              var(--sb-bg);
+  color: var(--sb-text);
+}
+
+a {
+  font-weight: 600;
+  color: var(--sb-primary);
+  text-decoration: none;
+}
+
+a:hover { color: var(--sb-primary-600); }
+
+/* Layout */
+.sb-app { width: 100%; }
+.sb-auth-wrap { width: 100%; }
+.sb-auth-header { display: flex; justify-content: center; padding: 24px 0; }
+.sb-auth-main { display: flex; justify-content: center; padding: 0 16px; }
+.sb-auth-card {
+  width: 100%;
+  max-width: 880px;
+  background: linear-gradient(180deg, rgba(39,44,75,0.65), rgba(23,26,43,0.85));
+  border: 1px solid var(--sb-border);
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.35);
+}
+.sb-auth-title { margin: 0 0 6px; font-size: 28px; font-weight: 800; letter-spacing: 0.2px; }
+.sb-auth-subtitle { margin: 0 0 24px; color: var(--sb-muted); }
+.sb-auth-footer { text-align: center; padding: 24px 0; }
+.sb-muted { color: var(--sb-muted); }
+.center { text-align: center; }
+
+/* Logo */
+.sb-logo { display: inline-flex; gap: 10px; align-items: center; color: var(--sb-text); }
+.sb-logo-text { font-weight: 900; letter-spacing: 0.4px; }
+
+/* Grid roles */
+.sb-grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 16px; }
+.sb-role { border: 1px solid var(--sb-border); border-radius: 12px; padding: 20px; background: #121528; }
+.sb-role.student { border-color: color-mix(in oklab, var(--sb-primary) 40%, var(--sb-border)); }
+.sb-role.instructor { border-color: color-mix(in oklab, var(--sb-accent) 40%, var(--sb-border)); }
+.sb-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+
+/* Form */
+.sb-form { display: grid; gap: 14px; }
+.sb-field { display: grid; gap: 8px; }
+.sb-field label { font-size: 14px; color: var(--sb-muted); }
+.sb-field input {
+  background: var(--sb-surface);
+  color: var(--sb-text);
+  border: 1px solid var(--sb-border);
+  border-radius: 10px;
+  padding: 12px 14px;
+}
+.sb-field input:focus { outline: 2px solid color-mix(in oklab, var(--sb-primary) 60%, transparent); border-color: var(--sb-primary); }
+
+/* Buttons */
+.sb-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 10px 14px; border-radius: 10px; border: 1px solid transparent; font-weight: 700; }
+.sb-btn.primary { background: var(--sb-primary); color: #fff; }
+.sb-btn.primary:hover { background: var(--sb-primary-600); }
+.sb-btn.accent { background: var(--sb-accent); color: #001315; }
+.sb-btn.accent:hover { background: var(--sb-accent-600); }
+.sb-btn.ghost { background: var(--sb-ghost); color: var(--sb-text); border-color: var(--sb-border); }
+.sb-btn.ghost:hover { background: #343a5e; }
+.w-full { width: 100%; }
+
+/* Responsive */
+@media (max-width: 720px) {
+  .sb-grid-2 { grid-template-columns: 1fr; }
+  .sb-auth-card { padding: 20px; }
+}
+
+/* Keep base template styles safe for any leftover elements */
+h1 { font-size: 3.2em; line-height: 1.1; }
+button { cursor: pointer; transition: border-color 0.25s; }
