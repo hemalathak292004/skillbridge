@@ -11,6 +11,8 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 
   /* SkillBridge Brand */
   --sb-bg: #0f1220;
@@ -107,4 +109,9 @@ a:hover { color: var(--sb-primary-600); }
 
 /* Keep base template styles safe for any leftover elements */
 h1 { font-size: 3.2em; line-height: 1.1; }
-button { cursor: pointer; transition: border-color 0.25s; }
+button { 
+  cursor: pointer; 
+  transition: border-color 0.25s; 
+  -webkit-user-select: none;
+  user-select: none;
+}

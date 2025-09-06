@@ -1,4 +1,5 @@
-# SkillBridge Dashboard
+
+ # SkillBridge Dashboard
 
 ## Overview
 The SkillBridge Dashboard is a comprehensive, role-based dashboard that provides different experiences for students and instructors after authentication.
