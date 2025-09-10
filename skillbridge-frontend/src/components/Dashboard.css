@@ -17,9 +17,10 @@
 }
 
 .dashboard-header-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -64,13 +65,14 @@
 
 /* Main Content */
 .dashboard-main {
-  padding: 2rem 0;
+  padding: 24px 0;
 }
 
 .dashboard-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0 24px;
 }
 
 /* Sections */
