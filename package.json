@@ -1,0 +1,26 @@
+{
+  "name": "skillbridge",
+  "version": "1.0.0",
+  "description": "A modern learning management system built with React and Node.js",
+  "main": "index.js",
+  "scripts": {
+    "setup": "powershell -ExecutionPolicy Bypass -File setup.ps1",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd skillbridge-backend && npm start",
+    "client": "cd skillbridge-frontend && npm run dev",
+    "install-all": "cd skillbridge-backend && npm install && cd ../skillbridge-frontend && npm install",
+    "start": "npm run dev"
+  },
+  "keywords": [
+    "learning-management-system",
+    "react",
+    "nodejs",
+    "mongodb",
+    "education"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
